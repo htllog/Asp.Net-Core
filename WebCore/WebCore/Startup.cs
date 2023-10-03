@@ -32,6 +32,8 @@ public class Startup
         app.UseHttpsRedirection();
         app.UseStaticFiles();
 
+        app.UseMiddleware<RequestResponseLoggingMiddleware>();
+        
         app.UseRouting();
         app.UseAuthorization();
         
