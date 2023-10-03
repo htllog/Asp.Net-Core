@@ -1,3 +1,4 @@
+using WebCore.Controllers;
 using WebCore.Middleware;
 
 namespace WebCore;
@@ -18,7 +19,7 @@ public class Startup
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
-        app.UseExceptionHandler("/Home/Error");
+        app.UseExceptionHandler("/Error");
 
         if (env.IsDevelopment())
         {
@@ -32,6 +33,8 @@ public class Startup
         app.UseHttpsRedirection();
         app.UseStaticFiles();
 
+        // Use the custom middleware
+        app.UseMiddleware<CustomMapMiddleware>();
         app.UseMiddleware<RequestResponseLoggingMiddleware>();
         
         app.UseRouting();
