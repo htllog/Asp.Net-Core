@@ -1,3 +1,5 @@
+using WebCore.Middleware;
+
 namespace WebCore;
 
 public class Startup
@@ -16,22 +18,23 @@ public class Startup
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
+        app.UseExceptionHandler("/Home/Error");
+
         if (env.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
         }
         else
         {
-            app.UseExceptionHandler("Home/Error");
             app.UseHsts();
         }
+
         app.UseHttpsRedirection();
         app.UseStaticFiles();
-        
+
         app.UseRouting();
-
         app.UseAuthorization();
-
+        
         app.UseEndpoints(endpoint =>
         {
             endpoint.MapControllerRoute(
