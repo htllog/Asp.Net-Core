@@ -2,11 +2,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebCore.Controllers;
 
+[ApiController]
+[Route("[controller]")]
 public class HomeController : Controller
 {
-    // GET
-    public IActionResult Index()
+    [HttpGet("hello")]
+    public string Hello()
     {
-        return Content("Hello from HomeController");
+        return "hello world";
     }
 }

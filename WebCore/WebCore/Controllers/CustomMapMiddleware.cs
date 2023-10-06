@@ -9,21 +9,24 @@ public class CustomMapMiddleware
     {
         _next = next;
     }
-
+    
     public async Task InvokeAsync(HttpContext context)
     {
-        // 检查请求路径
         var path = context.Request.Path.Value?.ToLower();
-        
-        // 处理不同的路径
+
         switch (path)
         {
             case "/map1":
-                await context.Response.WriteAsync("Map Test 1");
+                // 提取 “/map1” 之后的子路径
+                var subPathMap1 = context.Request.Path.Value?.Substring("/map1".Length);
+                await context.Response.WriteAsync($"Map Test 1{subPathMap1}");
                 break;
+
             case "/map2":
-                await context.Response.WriteAsync("Map Test 2");
+                var subPathMap2 = context.Request.Path.Value?.Substring("/map2".Length);
+                await context.Response.WriteAsync($"Map Test 2{subPathMap2}");
                 break;
+
             default:
                 await context.Response.WriteAsync("Hello from non-Map delegate.");
                 break;
