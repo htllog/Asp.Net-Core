@@ -34,7 +34,7 @@ public class Startup
         app.UseStaticFiles();
 
         // Use the custom middleware
-        app.UseMiddleware<CustomMapMiddleware>();
+        // app.UseMiddleware<CustomMapMiddleware>();
         app.UseMiddleware<RequestResponseLoggingMiddleware>();
         
         app.UseRouting();
