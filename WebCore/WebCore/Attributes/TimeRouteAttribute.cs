@@ -15,7 +15,7 @@ public class TimeRouteAttribute : Attribute, IActionConstraintFactory
     {
         _startTime = TimeSpan.Parse(startTime);
         _endTime = TimeSpan.Parse(endTime);
-        RouteTemplate = "testTime/[controller]";
+        RouteTemplate = "example/[controller]";
     }
 
     public IActionConstraint CreateInstance(IServiceProvider serviceProvider)
