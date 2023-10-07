@@ -40,9 +40,10 @@ public class Startup
         app.UseRouting();
         app.UseAuthorization();
         
-        app.UseEndpoints(endpoint =>
+        app.UseEndpoints(endpoints =>
         {
-            endpoint.MapControllerRoute(
+            endpoints.MapControllers();  // Enable controllers
+            endpoints.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
         });

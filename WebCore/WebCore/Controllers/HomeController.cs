@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 namespace WebCore.Controllers;
 
 [ApiController]
-[Route("[controller]")]
-public class HomeController : Controller
+[Route("api/[controller]")]
+public class HomeController : ControllerBase
 {
-    [HttpGet("hello")]
+    [HttpGet]
     public string Hello()
     {
         return "hello world";
