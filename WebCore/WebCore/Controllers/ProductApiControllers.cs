@@ -13,7 +13,7 @@ namespace WebCore.Controllers
             return Ok("All products");
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public IActionResult GetProductById(int id)
         {
             return Ok($"Product with ID: {id}");
