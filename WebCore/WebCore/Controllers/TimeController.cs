@@ -3,6 +3,7 @@ using WebCore.Attributes;
 
 namespace WebCore.Controllers;
 
+[Route("example/[controller]")]
 [TimeRoute("09:00:00", "17:00:00")]
 public class TimeController : ControllerBase
 {
