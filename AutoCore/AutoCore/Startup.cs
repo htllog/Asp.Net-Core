@@ -1,6 +1,5 @@
-using AutoCore.Modules;
-using AutoCore.Services;
 using Autofac;
+using AutoCore.Modules;
 
 namespace AutoCore
 {
@@ -18,12 +17,6 @@ namespace AutoCore
             services.AddControllers();
             services.AddAutoMapper(typeof(Startup));
         }
-
-        // 直接注册方式
-        // public void ConfigureContainer(ContainerBuilder builder)
-        // {
-        //     builder.RegisterType<GreetingService>().As<IGreetingService>();
-        // }
         
         public void ConfigureContainer(ContainerBuilder builder)
         {
@@ -51,9 +44,6 @@ namespace AutoCore
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
