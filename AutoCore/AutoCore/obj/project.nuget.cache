@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "OysewzGI8yQEBWXrY/Ol5vM6VLKSKFK9J7f/zhSnUp//OP/Pob0A8iG01441SNCThd/3AKvoIIcm2mg4Iv4OUg==",
+  "success": true,
+  "projectFilePath": "/Users/zhuangzeping/Documents/GitHub/Asp.Net-Core/AutoCore/AutoCore/AutoCore.csproj",
+  "expectedPackageFiles": [
+    "/Users/zhuangzeping/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/zhuangzeping/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
