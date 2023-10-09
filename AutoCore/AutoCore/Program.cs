@@ -1,16 +1,21 @@
-using AutoCore;
+using Microsoft.Extensions.Hosting;
+using Autofac.Extensions.DependencyInjection;
 
-public class Program
+namespace AutoCore
 {
-    public static void Main(string[] args)
+    public class Program
     {
-        CreateHostBuilder(args).Build().Run();
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .UseServiceProviderFactory(new AutofacServiceProviderFactory()) // Use AutoFac
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
     }
-    
-    public static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuildr =>
-            {
-                webBuildr.UseStartup<Startup>();
-            });
 }

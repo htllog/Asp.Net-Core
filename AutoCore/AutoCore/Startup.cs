@@ -1,44 +1,53 @@
-namespace AutoCore;
+using AutoCore.Services;
+using Autofac;
 
-public class Startup
+namespace AutoCore
 {
-    public Startup(IConfiguration configuration)
+    public class Startup
     {
-        Configuration = configuration;
-    }
-    
-    public IConfiguration Configuration { get; }
-
-    public void ConfigureServices(IServiceCollection services)
-    {
-        services.AddAutoMapper(typeof(Startup));
-        services.AddControllers();
-    }
-
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-    {
-        app.UseExceptionHandler("/Home/Error");
-
-        if (env.IsDevelopment())
+        public Startup(IConfiguration configuration)
         {
-            app.UseDeveloperExceptionPage();
-        }
-        else
-        {
-            app.UseHsts();
+            Configuration = configuration;
         }
 
-        app.UseHttpsRedirection();
-        app.UseStaticFiles();
+        public IConfiguration Configuration { get; }
 
-        app.UseRouting();
-        app.UseAuthorization();
-
-        app.UseEndpoints(endpoints =>
+        public void ConfigureServices(IServiceCollection services)
         {
-            endpoints.MapControllerRoute(
-                name: "default",
-                pattern: "{controller = Home}/{action = Index}/{id?}");
-        });
+            services.AddAutoMapper(typeof(Startup));
+            services.AddControllers();
+        }
+
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterType<GreetingService>().As<IGreetingService>();
+        }
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            app.UseExceptionHandler("/Home/Error");
+
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+
+            app.UseRouting();
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
+        }
     }
 }
