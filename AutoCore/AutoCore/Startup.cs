@@ -1,3 +1,4 @@
+using AutoCore.Modules;
 using AutoCore.Services;
 using Autofac;
 
@@ -5,28 +6,32 @@ namespace AutoCore
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+        
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAutoMapper(typeof(Startup));
             services.AddControllers();
+            services.AddAutoMapper(typeof(Startup));
         }
 
+        // 直接注册方式
+        // public void ConfigureContainer(ContainerBuilder builder)
+        // {
+        //     builder.RegisterType<GreetingService>().As<IGreetingService>();
+        // }
+        
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            builder.RegisterType<GreetingService>().As<IGreetingService>();
+            builder.RegisterModule(new GreetingModule());
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseExceptionHandler("/Home/Error");
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -40,10 +45,12 @@ namespace AutoCore
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

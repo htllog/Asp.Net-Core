@@ -13,10 +13,9 @@ public class GreetingController : Controller
     }
 
     // http://localhost:5097/Greeting/SayHello?name=Ohlin
-    // Hello, Ohlin
-    public void SayHello(string name)
+    public IActionResult SayHello(string name)
     {
         var greeting = _greetingService.Greet(name);
-        Console.WriteLine(greeting);
+        return Content(greeting);
     }
 }
