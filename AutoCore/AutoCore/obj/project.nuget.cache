@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "NC4I0PVH/g6WPutyndln4VP6frcXf4l7BmbRTw6zu1QAB/bQG/SBMfrDr7QZD55Wu1uw4JGQ/qiYeM7N72yflA==",
+  "dgSpecHash": "AlRKmAjlPVnQmecotdntZDx8m+3ieHM55o73SdKv41tAEDQqxlRlZKU1+kEHyypUEs6MOlVLzXo8zJNW1tbcmw==",
   "success": true,
   "projectFilePath": "/Users/zhuangzeping/Documents/GitHub/Asp.Net-Core/AutoCore/AutoCore/AutoCore.csproj",
   "expectedPackageFiles": [
+    "/Users/zhuangzeping/.nuget/packages/autofac/6.4.0/autofac.6.4.0.nupkg.sha512",
+    "/Users/zhuangzeping/.nuget/packages/autofac.extensions.dependencyinjection/8.0.0/autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "/Users/zhuangzeping/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/zhuangzeping/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/zhuangzeping/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
@@ -132,7 +134,7 @@
     "/Users/zhuangzeping/.nuget/packages/system.console/4.3.0/system.console.4.3.0.nupkg.sha512",
     "/Users/zhuangzeping/.nuget/packages/system.data.datasetextensions/4.5.0/system.data.datasetextensions.4.5.0.nupkg.sha512",
     "/Users/zhuangzeping/.nuget/packages/system.diagnostics.debug/4.3.0/system.diagnostics.debug.4.3.0.nupkg.sha512",
-    "/Users/zhuangzeping/.nuget/packages/system.diagnostics.diagnosticsource/4.3.0/system.diagnostics.diagnosticsource.4.3.0.nupkg.sha512",
+    "/Users/zhuangzeping/.nuget/packages/system.diagnostics.diagnosticsource/4.7.1/system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
     "/Users/zhuangzeping/.nuget/packages/system.diagnostics.tools/4.3.0/system.diagnostics.tools.4.3.0.nupkg.sha512",
     "/Users/zhuangzeping/.nuget/packages/system.diagnostics.tracing/4.3.0/system.diagnostics.tracing.4.3.0.nupkg.sha512",
     "/Users/zhuangzeping/.nuget/packages/system.drawing.common/6.0.0/system.drawing.common.6.0.0.nupkg.sha512",
