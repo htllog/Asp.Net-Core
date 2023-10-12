@@ -41,7 +41,11 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.0-rc.2.22472.11, )"
+              "version": "[6.0.0-rc.2.21480.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.0-rc.2.21480.5, )"
             }
           },
           "imports": [

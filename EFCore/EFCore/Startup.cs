@@ -1,3 +1,6 @@
+using EFCore.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace EFCore;
 
 public class Startup
@@ -12,6 +15,10 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllers();
+        
+        var connectionString = Configuration.GetConnectionString("DefaultConnectionString");
+        services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseSqlServer(connectionString));
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
