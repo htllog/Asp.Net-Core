@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "TVYLdFQho5q6YzpnSV/n7ZAVxcIqArdGapxRZUNW71TT5P/g7Ikv/+bnvJyBkPFLyW9b55iPt1B0VBZECIJw+g==",
+  "success": true,
+  "projectFilePath": "/Users/zhuangzeping/Documents/GitHub/Asp.Net-Core/EFCore/EFCore/EFCore.csproj",
+  "expectedPackageFiles": [
+    "/Users/zhuangzeping/.nuget/packages/microsoft.entityframeworkcore/7.0.0-rc.2.22472.11/microsoft.entityframeworkcore.7.0.0-rc.2.22472.11.nupkg.sha512",
+    "/Users/zhuangzeping/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.0-rc.2.22472.11/microsoft.entityframeworkcore.abstractions.7.0.0-rc.2.22472.11.nupkg.sha512",
+    "/Users/zhuangzeping/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.0-rc.2.22472.11/microsoft.entityframeworkcore.analyzers.7.0.0-rc.2.22472.11.nupkg.sha512",
+    "/Users/zhuangzeping/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0-rc.2.22472.3/microsoft.extensions.caching.abstractions.7.0.0-rc.2.22472.3.nupkg.sha512",
+    "/Users/zhuangzeping/.nuget/packages/microsoft.extensions.caching.memory/7.0.0-rc.2.22472.3/microsoft.extensions.caching.memory.7.0.0-rc.2.22472.3.nupkg.sha512",
+    "/Users/zhuangzeping/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0-rc.2.22472.3/microsoft.extensions.dependencyinjection.7.0.0-rc.2.22472.3.nupkg.sha512",
+    "/Users/zhuangzeping/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0-rc.2.22472.3/microsoft.extensions.dependencyinjection.abstractions.7.0.0-rc.2.22472.3.nupkg.sha512",
+    "/Users/zhuangzeping/.nuget/packages/microsoft.extensions.logging/7.0.0-rc.2.22472.3/microsoft.extensions.logging.7.0.0-rc.2.22472.3.nupkg.sha512",
+    "/Users/zhuangzeping/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0-rc.2.22472.3/microsoft.extensions.logging.abstractions.7.0.0-rc.2.22472.3.nupkg.sha512",
+    "/Users/zhuangzeping/.nuget/packages/microsoft.extensions.options/7.0.0-rc.2.22472.3/microsoft.extensions.options.7.0.0-rc.2.22472.3.nupkg.sha512",
+    "/Users/zhuangzeping/.nuget/packages/microsoft.extensions.primitives/7.0.0-rc.2.22472.3/microsoft.extensions.primitives.7.0.0-rc.2.22472.3.nupkg.sha512",
+    "/Users/zhuangzeping/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
