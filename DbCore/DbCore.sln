@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbCore", "DbCore\DbCore.csproj", "{2005AF2E-36D5-4843-87A8-7628CF8D0009}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2005AF2E-36D5-4843-87A8-7628CF8D0009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2005AF2E-36D5-4843-87A8-7628CF8D0009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2005AF2E-36D5-4843-87A8-7628CF8D0009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2005AF2E-36D5-4843-87A8-7628CF8D0009}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
