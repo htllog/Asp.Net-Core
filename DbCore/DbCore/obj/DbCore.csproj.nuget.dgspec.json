@@ -53,9 +53,17 @@
               "target": "Package",
               "version": "[6.0.0-rc.2.21480.5, )"
             },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.10.9, )"
+            },
             "dbup": {
               "target": "Package",
               "version": "[5.0.8, )"
+            },
+            "dbup-mysql": {
+              "target": "Package",
+              "version": "[5.0.10, )"
             }
           },
           "imports": [
