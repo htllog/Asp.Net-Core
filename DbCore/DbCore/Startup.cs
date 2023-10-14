@@ -1,4 +1,6 @@
 using DbCore.Data;
+using DbCore.Models;
+using DbCore.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace DbCore;
@@ -18,6 +20,9 @@ public class Startup
         
         // 注册 ConnectionString 服务
         services.AddSingleton<ConnectionString>();
+
+        services.AddScoped<IProductsRepository<Product>, ProductRepository<Product>>();
+
         
         // 注册 ApplicationDbContext
         var connectionString = Configuration.GetConnectionString("DefaultConnectionString");
