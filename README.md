@@ -2,7 +2,7 @@
 
 ## Db Core
 数据库扫描记录表
-![image](https://github.com/htllog/Asp.Net-Core/assets/118370026/cb44b64a-e916-4644-9c72-d0cf3b2bef17)
+![image](https://github.com/htllog/Asp.Net-Core/assets/118370026/56a7dbe9-04b7-47a1-a6c3-609514c3f269)
 
 接口测试
 ![image](https://github.com/htllog/Asp.Net-Core/assets/118370026/34c52d11-0a28-4c31-9cf2-538d506e2a03)
