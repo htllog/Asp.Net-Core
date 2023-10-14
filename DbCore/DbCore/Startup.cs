@@ -15,7 +15,11 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllers();
-
+        
+        // 注册 ConnectionString 服务
+        services.AddSingleton<ConnectionString>();
+        
+        // 注册 ApplicationDbContext
         var connectionString = Configuration.GetConnectionString("DefaultConnectionString");
         services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(connectionString));

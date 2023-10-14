@@ -1,5 +1,7 @@
 using DbCore;
+using DbCore.Data;
 using DbCore.DbUp;
+using DbCore.Services;
 
 public class Program
 {
@@ -10,22 +12,17 @@ public class Program
             .AddEnvironmentVariables()
             .Build();
         
-        // 从配置文件获取链接字符串
-        string connectionString = configuration.GetConnectionString("DefaultConnectionString");
+        new DbRunner(new ConnectionString(configuration)).RunMigration();
+
+        using (var dataManager = new ProductsDataManager(configuration))
+        {
+           // dataManager.AddProduct("Demo5", 49.9m);
+
+            var addedProduct = dataManager.GetProduct(5);
+            Console.WriteLine("Added Product:");
+            Console.WriteLine($"Product ID: {addedProduct.ProductId}, Name: {addedProduct.Name}, Price: {addedProduct.Price}");
+        }
         
-        // 初始化 DbRunner
-        var dbRunner = new DbRunner(connectionString);
-        
-        // 执行数据库迁移
-        dbRunner.RunMigration();
-        
-        // 执行数据库升级
-        dbRunner.RunUpgrade();
-        
-        // 执行自定义 DbUp 操作
-        dbRunner.CustomDbUpOperation();
-        
-        // 继续执行应用程序的主体逻辑
         CreateHostBuilder(args).Build().Run();
     }
 

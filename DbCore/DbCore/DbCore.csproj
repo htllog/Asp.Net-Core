@@ -21,6 +21,7 @@
     <!--  嵌入式资源  -->
     <ItemGroup>
         <EmbeddedResource Include="Dbup\Scripts\Script001_initial_tables.sql" />
+        <EmbeddedResource Include="Dbup\Scripts\Script002_create_products_tables.sql" />
     </ItemGroup>
 
 </Project>
